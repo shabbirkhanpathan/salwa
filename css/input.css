@@ -1,0 +1,71 @@
+@font-face {
+  font-family: 'HelveticaNowDisplay-Medium';
+  src: url('../public/fonts/HelveticaNowDisplay-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'HelveticaNowDisplay-Bold';
+  src: url('../public/fonts/HelveticaNowDisplay-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'HelveticaNowText-Bold';
+  src: url('../public/fonts/HelveticaNowText-Bold.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'HelveticaNowText-ExtraBold';
+  src: url('../public/fonts/HelveticaNowText-ExtraBold.otf') format('opentype');
+}
+@font-face {
+  font-family: 'HelveticaNowText-Regular';
+  src: url('../public/fonts/HelveticaNowText-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'HelveticaNowText-Medium';
+  src: url('../public/fonts/HelveticaNowText-Medium.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Rubik-Light';
+  src: url('../public/fonts/Rubik-Light.otf') format('opentype');
+}
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+  @layer components {
+    .card-box {
+  @apply border border-gray-200 rounded-[32px] p-6 cursor-pointer transition-all duration-200 bg-white w-[300px] h-[300px] flex flex-col justify-center items-center text-center;
+}
+
+.card-box:hover {
+  @apply border-[#00B4FA] border-6;
+  border-width: 6px;
+}
+
+.card-box-active {
+  @apply border-[#00B4FA];
+  border-width: 6px;
+}
+
+.card-box .card-subtext {
+  @apply text-[17px] text-gray-500 font-helveticaMedium mt-2 opacity-0 transition-opacity duration-200;
+ opacity: 0px;
+}
+
+.card-box:hover .card-subtext,
+.card-box-active .card-subtext {
+  @apply opacity-100;
+}
+ .step-circle {
+        @apply w-8 h-8 flex items-center justify-center rounded-full border-2 border-gray-300 text-gray-400 transition-all duration-300;
+      }
+
+      .step-active {
+        @apply bg-[#00B4FA] text-white border-[#00B4FA];
+      }
+  }
