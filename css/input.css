@@ -68,4 +68,5 @@
       .step-active {
         @apply bg-[#00B4FA] text-white border-[#00B4FA];
       }
+      
   }

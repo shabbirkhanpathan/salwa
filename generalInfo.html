@@ -85,157 +85,228 @@
                     <!-- Cards Grid - CENTER -->
                     <div class="flex justify-center md:justify-start">
                         <div class="genral-information-pg-main w-full">
+                            <div class="max-w-7xl mx-auto space-y-6">
 
+                                <form class="max-w-screen-xl mx-auto space-y-8">
 
+                                    <!-- Row 1 -->
+                                    <div class="grid grid-cols-1 sm:grid-cols-8 gap-5 relative">
+                                        <div class="relative w-full">
+                                            <select
+                                                class="appearance-none w-full bg-[#f6f6f6]  rounded-xl px-4 py-4 pr-10 outline-none font-helveticaMedium">
+                                                <option>Title</option>
+                                                <option>Mr.</option>
+                                                <option>Ms.</option>
+                                                <option>Dr.</option>
+                                            </select>
+                                            <!-- Dropdown Icon -->
+                                            <div
+                                                class="pointer-events-none absolute inset-y-0 right-4 flex items-center text-gray-500">
+                                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M19 9l-7 7-7-7" />
+                                                </svg>
+                                            </div>
+                                        </div>
 
-                            <div class="w-full mx-auto mb-[14px]">
-                                <div class="bg-[#f8f8f8] rounded-[12px]">
-                                    <button id="dropdownButton"
-                                        class="flex justify-between items-center w-full px-4 py-2 text-left font-semibold text-[#1b1787] text-[20px]"
-                                        onclick="toggleDropdown()">
-                                        <span id="selectedText">Basic Information</span>
-                                        <svg id="arrowIcon"
-                                            class="w-4 h-4 transform transition-transform duration-300 text-gray-500"
-                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M19 9l-7 7-7-7"></path>
-                                        </svg>
-                                    </button>
-
-                                    <div id="dropdownContent" class="px-4 pb-3 hidden">
-                                        <ul class="space-y-2 pt-2">
-                                            <li onclick="selectOption(this)"
-                                                class="text-gray-700 hover:text-blue-800 cursor-pointer">Dropdown
-                                                One</li>
-                                            <li onclick="selectOption(this)"
-                                                class="text-gray-700 hover:text-blue-800 cursor-pointer">Dropdown
-                                                Two</li>
-                                            <li onclick="selectOption(this)"
-                                                class="text-gray-700 hover:text-blue-800 cursor-pointer">Dropdown
-                                                Three</li>
-                                            <li onclick="selectOption(this)"
-                                                class="text-gray-700 hover:text-blue-800 cursor-pointer">Dropdown
-                                                Four</li>
-                                            <li onclick="selectOption(this)"
-                                                class="text-gray-700 hover:text-blue-800 cursor-pointer">Dropdown
-                                                Five</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="itp-and-dpdn flex flex-col md:flex-row gap-5 mb-[40px]">
-
-                                <!-- Contact Person Name -->
-                                <input type="text" placeholder="Contact Person Name"
-                                    class="w-full md:w-1/3 bg-[#f2f2f2] border border-[#D8D8D8] rounded-[12px] px-4 py-4 text-[15px] font-medium text-[#6A6A69] outline-none">
-
-                                <!-- Contact Person Email -->
-                                <input type="email" placeholder="Contact Person Email"
-                                    class="w-full md:w-1/3 bg-[#f2f2f2] border border-[#D8D8D8] rounded-[12px] px-4 py-4 text-[15px] font-medium text-[#6A6A69] outline-none">
-
-                                <!-- Dropdown -->
-                                <div class="relative w-full md:w-1/3">
-                                    <button type="button"
-                                        class="dropdown-button w-full flex justify-between items-center bg-[#f2f2f2] border border-[#D8D8D8] rounded-[12px] px-4 py-4 text-[15px] font-medium text-[#6A6A69] outline-none">
-                                        Choose Post Validity Time
-                                        <svg class="w-4 h-4 ml-2 text-[#6A6A69]" fill="none" stroke="currentColor"
-                                            stroke-width="2" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7">
-                                            </path>
-                                        </svg>
-                                    </button>
-
-                                    <!-- Dropdown Menu -->
-                                    <ul
-                                        class="Validity-Time-dpdn absolute z-10 mt-1 w-full bg-white border border-[#D8D8D8] rounded-[12px] text-[15px] font-medium text-[#6A6A69] shadow hidden">
-                                        <li class="px-4 py-2 hover:bg-[#f1f1f1] cursor-pointer">Choose Post Validity
-                                            Time</li>
-                                        <li class="px-4 py-2 hover:bg-[#f1f1f1] cursor-pointer">Choose Post Validity
-                                            Time</li>
-                                        <li class="px-4 py-2 hover:bg-[#f1f1f1] cursor-pointer">Choose Post Validity
-                                            Time</li>
-                                        <li class="px-4 py-2 hover:bg-[#f1f1f1] cursor-pointer">Choose Post Validity
-                                            Time</li>
-                                    </ul>
-                                </div>
-
-                            </div>
-
-                            <div class="w-full mx-auto mb-[14px] dropdown-wrapper">
-                                <div class="bg-[#f8f8f8] rounded-[12px]">
-                                    <button
-                                        class="dropdown-toggle flex justify-between items-center w-full px-4 py-2 text-left font-semibold text-[#1b1787] text-[20px]">
-                                        <span class="dropdown-selected">Location</span>
-                                        <svg class="dropdown-arrow w-4 h-4 transform transition-transform duration-300 text-gray-500"
-                                            fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                                d="M19 9l-7 7-7-7"></path>
-                                        </svg>
-                                    </button>
-
-                                    <div class="dropdown-menu px-4 pb-3 hidden">
-                                        <ul class="space-y-2 pt-2">
-                                            <li class="dropdown-item text-gray-700 hover:text-blue-800 cursor-pointer">
-                                                Dropdown
-                                                One</li>
-                                            <li class="dropdown-item text-gray-700 hover:text-blue-800 cursor-pointer">
-                                                Dropdown
-                                                Two</li>
-                                            <li class="dropdown-item text-gray-700 hover:text-blue-800 cursor-pointer">
-                                                Dropdown
-                                                Three</li>
-                                            <li class="dropdown-item text-gray-700 hover:text-blue-800 cursor-pointer">
-                                                Dropdown
-                                                Four</li>
-                                            <li class="dropdown-item text-gray-700 hover:text-blue-800 cursor-pointer">
-                                                Dropdown
-                                                Five</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="itp-and-dpdn flex flex-col md:flex-row gap-5 mb-[40px]">
-
-                                <div class="w-full md:w-1/3">
-
-                                    <div class="sec-itp-full w-full md:w-[67%] grid grid-cols-1 md:grid-cols-2 gap-5">
-                                        <input type="text" placeholder="Country"
-                                            class="w-full md:w-1/3 bg-[#f2f2f2] border border-[#D8D8D8] rounded-[12px] px-4 py-4 text-[15px] font-medium text-[#6A6A69] outline-none">
-                                        <input type="text" placeholder="Region"
-                                            class="w-full md:w-1/3 bg-[#f2f2f2] border border-[#D8D8D8] rounded-[12px] px-4 py-4 text-[15px] font-medium text-[#6A6A69] outline-none">
-
-                                        <input type="text" placeholder="City"
-                                            class="w-full md:w-1/3 bg-[#f2f2f2] border border-[#D8D8D8] rounded-[12px] px-4 py-4 text-[15px] font-medium text-[#6A6A69] outline-none">
-                                        <input type="text" placeholder="District"
-                                            class="w-full md:w-1/3 bg-[#f2f2f2] border border-[#D8D8D8] rounded-[12px] px-4 py-4 text-[15px] font-medium text-[#6A6A69] outline-none">
-
-                                        <input type="text" placeholder="National Address - SPL (Short Address)"
-                                            class="w-full md:w-1/3 bg-[#f2f2f2] border border-[#D8D8D8] rounded-[12px] px-4 py-4 text-[15px] font-medium text-[#6A6A69] outline-none">
-                                        <input type="text" placeholder="Address"
-                                            class="w-full md:w-1/3 bg-[#f2f2f2] border border-[#D8D8D8] rounded-[12px] px-4 py-4 text-[15px] font-medium text-[#6A6A69] outline-none">
+                                        <input type="text" placeholder="Full name (first, middle, last)"
+                                            class="col-span-7 bg-[#f6f6f6]  rounded-xl px-4 py-4 outline-none font-helveticaMedium" />
                                     </div>
 
-                                </div>
-
-                                <div class="ifrm-map w-full md:w-1/2">
-                                    <div class="relative h-[209px] md:h-full w-full rounded-xl overflow-hidden">
-                                        <iframe
-                                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5429283.719367676!2d75.99742021181098!3d22.042285215988816!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1753779676738!5m2!1sen!2sin"
-                                            class="w-full h-full" style="border:0;" allowfullscreen="" loading="lazy"
-                                            referrerpolicy="no-referrer-when-downgrade">
-                                        </iframe>
-
-                                        <!-- Get Direction Button (Centered) -->
-                                        <div class="absolute inset-0 flex items-center justify-center">
-                                            <button
-                                                class="bg-[#1B1787] text-white font-semibold px-6 py-2 rounded-md hover:opacity-90">
-                                                Get direction
-                                            </button>
+                                    <!-- Row 2 -->
+                                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                                        <input type="text" placeholder="ID number / IQAMA number"
+                                            class="bg-[#f6f6f6]  rounded-xl px-4 py-4 outline-none font-helveticaMedium" />
+                                        <div class="relative w-full">
+                                            <input type="text" placeholder="Expiry date"
+                                                class="w-full bg-[#f6f6f6]  rounded-xl px-4 py-4 pr-12 outline-none font-helveticaMedium text-gray-600 placeholder-gray-400" />
+                                            <!-- Calendar Icon -->
+                                            <div
+                                                class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-400">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"
+                                                    viewBox="0 0 34 34" fill="none">
+                                                    <path
+                                                        d="M16.1494 26.0698H18.7693M24.0393 26.0698H26.6694M8.2693 26.0698H10.8894M16.1494 18.1899H18.7693M24.0393 18.1899H26.6694M8.2693 18.1899H10.8894M1.69923 11.5996H33.2293M25.3494 7.59961V1.04004M9.57936 7.59961V1.04004M6.96925 32.5996H27.9692C28.66 32.5996 29.344 32.4636 29.9822 32.1992C30.6204 31.9349 31.2003 31.5475 31.6887 31.0591C32.1772 30.5706 32.5645 29.9907 32.8289 29.3525C33.0932 28.7144 33.2293 28.0306 33.2293 27.3398V8.97998C33.2293 7.58402 32.6754 6.24487 31.6892 5.25684C30.7031 4.26881 29.3652 3.71261 27.9692 3.70996H6.96925C6.27718 3.70996 5.59203 3.846 4.95265 4.11084C4.31326 4.37568 3.73229 4.76405 3.24293 5.25342C2.75356 5.74278 2.36544 6.3235 2.1006 6.96289C1.83575 7.60228 1.69923 8.28791 1.69923 8.97998V27.3398C1.69791 28.0323 1.83353 28.7179 2.09791 29.3579C2.36229 29.9979 2.75037 30.5797 3.24 31.0693C3.72963 31.559 4.31096 31.9471 4.95094 32.2114C5.59092 32.4758 6.27681 32.6112 6.96925 32.6099V32.5996Z"
+                                                        stroke="#999999" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
+
+                                    <!-- Row 3 -->
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+
+                                        <div class="relative w-full">
+                                            <input type="text" placeholder="Date of birth"
+                                                class="bg-[#f6f6f6] w-full  rounded-xl px-4 py-4 outline-none font-helveticaMedium" />
+                                            <!-- Calendar Icon -->
+                                            <div
+                                                class="absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-400">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"
+                                                    viewBox="0 0 34 34" fill="none">
+                                                    <path
+                                                        d="M16.1494 26.0698H18.7693M24.0393 26.0698H26.6694M8.2693 26.0698H10.8894M16.1494 18.1899H18.7693M24.0393 18.1899H26.6694M8.2693 18.1899H10.8894M1.69923 11.5996H33.2293M25.3494 7.59961V1.04004M9.57936 7.59961V1.04004M6.96925 32.5996H27.9692C28.66 32.5996 29.344 32.4636 29.9822 32.1992C30.6204 31.9349 31.2003 31.5475 31.6887 31.0591C32.1772 30.5706 32.5645 29.9907 32.8289 29.3525C33.0932 28.7144 33.2293 28.0306 33.2293 27.3398V8.97998C33.2293 7.58402 32.6754 6.24487 31.6892 5.25684C30.7031 4.26881 29.3652 3.71261 27.9692 3.70996H6.96925C6.27718 3.70996 5.59203 3.846 4.95265 4.11084C4.31326 4.37568 3.73229 4.76405 3.24293 5.25342C2.75356 5.74278 2.36544 6.3235 2.1006 6.96289C1.83575 7.60228 1.69923 8.28791 1.69923 8.97998V27.3398C1.69791 28.0323 1.83353 28.7179 2.09791 29.3579C2.36229 29.9979 2.75037 30.5797 3.24 31.0693C3.72963 31.559 4.31096 31.9471 4.95094 32.2114C5.59092 32.4758 6.27681 32.6112 6.96925 32.6099V32.5996Z"
+                                                        stroke="#999999" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
+                                                </svg>
+                                            </div>
+                                        </div>
+
+
+                                        <div
+                                            class="flex items-center gap-4 px-4 bg-[#ffffff] border justify-between h-[56px] border-[#D8D8D8] font-helveticaMedium text-[#999999] rounded-xl">
+                                            <label>Do you work?</label>
+                                            <div class="flex gap-6">
+                                                <label class="flex items-center gap-1">
+
+                                                    <input type="radio" name="work" class="accent-[#999999] w-4 h-4" />
+                                                    Yes
+                                                </label>
+                                                <label class="flex items-center gap-1"><input type="radio" name="work"
+                                                        class="accent-[#999999] w-4 h-4" />
+                                                    No</label>
+
+                                            </div>
+                                        </div>
+                                        <input type="text" placeholder="Job name"
+                                            class="bg-[#f6f6f6]  rounded-xl px-4 py-4 outline-none font-helveticaMedium" />
+                                    </div>
+
+                                    <!-- Row 4 -->
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                                        <input type="text" placeholder="Graduation certificate"
+                                            class="bg-[#f6f6f6]   rounded-xl px-4 py-4 outline-none font-helveticaMedium" />
+                                        <div
+                                            class="flex items-center gap-4 px-4 bg-[#ffffff] justify-between border border-[#D8D8D8] text-[#999999] h-[56px] rounded-xl font-helveticaMedium">
+                                            <label>Language graduate?</label>
+                                            <div class="flex gap-6">
+                                                <label class="flex items-center gap-1"><input type="radio"
+                                                        name="langGrad" class="accent-[#999999] w-4 h-4" />
+                                                    Yes</label>
+                                                <label class="flex items-center gap-1"><input type="radio"
+                                                        name="langGrad" class="accent-[#999999] w-4 h-4" />
+                                                    No</label>
+                                            </div>
+                                        </div>
+                                        <input type="text" placeholder="Acquired languages"
+                                            class="bg-[#f6f6f6]  rounded-xl px-4 py-4 outline-none font-helveticaMedium" />
+                                    </div>
+
+                                    <!-- Row 5 -->
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                                        <input type="email" placeholder="Official email"
+                                            class="bg-[#f6f6f6]  rounded-xl px-4 py-4 outline-none font-helveticaMedium" />
+                                        <div class="flex w-full rounded-xl overflow-hidden border border-[#e5e5e5]">
+                                            <!-- Country Code Select -->
+                                            <div class="flex items-center bg-[#f6f6f6] px-4 py-4 text-gray-600 text-sm">
+                                                <span class="mr-1">966</span>
+                                                <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor"
+                                                    viewBox="0 0 24 24">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M19 9l-7 7-7-7" />
+                                                </svg>
+                                            </div>
+
+                                            <!-- Divider -->
+                                            <div class="w-px bg-[#e0e0e0]"></div>
+
+                                            <!-- Phone Input -->
+                                            <input type="text" placeholder="987 772 299"
+                                                class="flex-1 bg-[#f6f6f6] px-4 py-4 outline-none font-helveticaMedium text-gray-600 text-sm" />
+                                        </div>
+                                        <input type="text" placeholder="Post office box"
+                                            class="bg-[#f6f6f6]  rounded-xl px-4 py-4 outline-none font-helveticaMedium" />
+                                    </div>
+
+                                    <!-- Row 6 -->
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                                        <input type="text" placeholder="Bank name"
+                                            class="bg-[#f6f6f6]  rounded-xl px-4 py-4 outline-none font-helveticaMedium" />
+                                        <div
+                                            class="flex items-center justify-between px-4 h-[56px] bg-white border border-[#D8D8D8] rounded-xl font-helveticaMedium text-[#999999]">
+                                            <span>Subscribing as agent? </span>
+                                            <div class="flex gap-6">
+
+
+
+                                                <label class="flex items-center gap-1">
+
+                                                    <input type="radio" name="agent" class="accent-[#999999] w-4 h-4" />
+                                                    Yes
+                                                </label>
+                                                <label class="flex items-center gap-1"><input type="radio" name="agent"
+                                                        class="accent-[#999999] w-4 h-4" />
+                                                    No</label>
+
+
+
+                                            </div>
+                                        </div>
+
+
+
+
+
+
+
+
+
+                                        <input type="text" placeholder="IBAN number"
+                                            class="bg-[#f6f6f6]  rounded-xl px-4 py-4 outline-none font-helveticaMedium" />
+                                    </div>
+
+                                    <!-- Row 7: Insurance Info & Map -->
+                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                                        <div class="col-span-2 ">
+                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                                <input type="text" placeholder="Insurance company name"
+                                                    class="bg-[#f6f6f6]  col-span-2 rounded-xl px-4 py-4 w-full outline-none font-helveticaMedium" />
+                                                <input type="text" placeholder="Insurance Policy Number"
+                                                    class="bg-[#f6f6f6]  rounded-xl px-4 py-4 w-full outline-none font-helveticaMedium" />
+                                                <input type="text" placeholder="Date of Expiry"
+                                                    class="bg-[#f6f6f6]  rounded-xl px-4 py-4 w-full outline-none font-helveticaMedium" />
+                                                <input type="text" placeholder="Address"
+                                                    class="bg-[#f6f6f6]  rounded-xl px-4 py-4 w-full outline-none font-helveticaMedium" />
+                                                <input type="text" placeholder="Region"
+                                                    class="bg-[#f6f6f6]  rounded-xl px-4 py-4 w-full outline-none font-helveticaMedium" />
+                                                <input type="text" placeholder="City"
+                                                    class="bg-[#f6f6f6]  rounded-xl px-4 py-4 w-full outline-none font-helveticaMedium" />
+                                                <input type="text" placeholder="Postal code"
+                                                    class="bg-[#f6f6f6]  rounded-xl px-4 py-4 w-full outline-none font-helveticaMedium" />
+                                            </div>
+                                        </div>
+
+                                        <!-- Map -->
+                                        <div class="relative h-full rounded-xl overflow-hidden">
+                                            <iframe
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3651.9020193691213!2d90.39151457595684!3d23.750876888734837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755b8c07b484747%3A0xa6c3ee594e50b867!2sDhaka!5e0!3m2!1sen!2sbd!4v1628083358942!5m2!1sen!2sbd"
+                                                width="100%" height="280" style="border:0;" allowfullscreen=""
+                                                loading="lazy" class="rounded-xl">
+                                            </iframe>
+                                            <div class="absolute inset-0 flex items-center justify-center">
+                                                <button
+                                                    class="bg-[#1B1787] text-white font-semibold px-6 py-2 rounded-md hover:opacity-90">
+                                                    Get direction
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Checkbox -->
+                                    <div
+                                        class="flex items-start gap-3 pt-4 text-[17px] font-helveticaMedium text-[#999999]">
+                                        <input type="checkbox" class="w-6 h-6  rounded-xl accent-[#999999]" />
+                                        <label>
+                                            I agree that above information is right and I agree.
+                                            <a href="#" class="text-[#00B4FA] underline">Terms &
+                                                Conditions</a>.
+                                        </label>
+                                    </div>
+
+
+                                </form>
 
                             </div>
 

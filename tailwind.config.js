@@ -2,7 +2,11 @@
 // tailwind.config.js
 // tailwind.config.js
 module.exports = {
-  content: ["./**/*.html"], // or wherever your HTML files live
+   content: [
+    "./*.html",         // watches all HTML files in root folder
+    "./**/*.html",      // watches HTML in subfolders too
+    "./**/*.js",        // watches JS files if you use JS/TS
+  ],
   theme: {
     extend: {
       colors: {
@@ -27,6 +31,12 @@ module.exports = {
        borderWidth: {
         6: '6px',
       },
+       backgroundColor: {
+        'custom-gray': '#f2f2f2',
+      },
+      padding: {
+        'py-4': '16px',
+      }
     },
   },
   plugins: [],
