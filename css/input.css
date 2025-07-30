@@ -68,5 +68,58 @@
       .step-active {
         @apply bg-[#00B4FA] text-white border-[#00B4FA];
       }
+
+
+      .input-field {
+    @apply bg-[#f6f6f6] rounded-xl px-4 py-4 outline-none font-helveticaMedium text-gray-600 placeholder-gray-400 w-full;
+  }
+
+  .select-field {
+    @apply appearance-none w-full bg-[#f6f6f6] rounded-xl px-4 py-4 pr-10 outline-none font-helveticaMedium;
+  }
+
+  .radio-wrapper {
+    @apply flex items-center gap-1;
+  }
+
+  .radio-group {
+    @apply flex items-center gap-4 px-4 bg-white border border-[#D8D8D8] text-[#999999] h-[56px] rounded-xl font-helveticaMedium justify-between;
+  }
+
+  .checkbox-field {
+    @apply w-6 h-6 rounded-xl accent-[#999999];
+  }
+
+  .form-row {
+    @apply grid grid-cols-1 md:grid-cols-3 gap-5;
+  }
+
+  .form-row-2 {
+    @apply grid grid-cols-1 md:grid-cols-2 gap-5;
+  }
+
+  .calendar-icon {
+    @apply absolute inset-y-0 right-4 flex items-center pointer-events-none text-gray-400;
+  }
+
+  .phone-wrapper {
+    @apply flex w-full rounded-xl overflow-hidden border border-[#e5e5e5];
+  }
+
+  .phone-code {
+    @apply flex items-center bg-[#f6f6f6] px-4 py-4 text-gray-600 text-sm;
+  }
+
+  .divider {
+    @apply w-px bg-[#e0e0e0];
+  }
+
+  .phone-input {
+    @apply flex-1 bg-[#f6f6f6] px-4 py-4 outline-none font-helveticaMedium text-gray-600 text-sm;
+  }
+
+  .checkbox-label {
+    @apply flex items-start gap-3 pt-4 text-[17px] font-helveticaMedium text-[#999999];
+  }
       
   }

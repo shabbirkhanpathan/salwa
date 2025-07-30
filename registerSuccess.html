@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Salwa</title>
+    <link href="css/output.css" rel="stylesheet" />
+</head>
+
+<body class="min-h-screen bg-white font-sans text-gray-800">
+    <!-- Header Bar -->
+    <div class="header p-4">
+        <header
+            class="relative w-full h-[80px] flex items-center px-6 rounded-2xl  md:px-12 bg-no-repeat bg-cover bg-center"
+            style="background-image: linear-gradient(to right, rgb(13,13,120, 0.9), rgb(13,13,120, 0.9)), url('img/headerBg.svg');">
+
+            <!-- Logo -->
+            <img src="img/logoHeader.svg" alt="Salwa Logo" class="h-10 w-auto" />
+
+            <div class="text-white ms-8 text-right relative z-10 leading-tight">
+                <p class="text-sm opacity-80">Towards a Comprehensive Healthcare Future</p>
+            </div>
+        </header>
+    </div>
+    <!-- Main Container -->
+    <div class="flex flex-col md:flex-row  w-full min-h-screen">
+        <!-- Left Vertical Stepper -->
+        <div class="md:w-[100px] w-full px-5 flex flex-col items-center justify-center py-12 relative"
+            x-data="{ currentStep: 5 }">
+            <div class="flex md:flex-col gap-0 items-center">
+
+                <!-- Vertical or Horizontal connecting line -->
+                <div class="absolute md:top-4 md:bottom-4 md:hidden md:w-px md:h-auto h-px bg-gray-300 z-0"></div>
+
+                <template x-for="step in 5" :key="step">
+                    <div class="flex md:flex-col items-center relative z-10">
+
+                        <!-- Line before (skip first) -->
+                        <template x-if="step !== 1">
+                            <div class="md:w-px md:h-5 w-4 h-px bg-[#A3A3A3]"></div>
+                        </template>
+
+                        <!-- Outer Circle -->
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center"
+                            :class="step <= currentStep ? 'border-2 border-[#0D0D78]' : 'border-0'">
+
+                            <!-- Inner Circle -->
+                            <div :class="step <= currentStep 
+                              ? 'bg-[#0D0D78] text-white' 
+                              : 'bg-[#949494] text-white'"
+                                class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
+                                <span x-text="step"></span>
+                            </div>
+                        </div>
+
+                        <!-- Line after (skip last) -->
+                        <template x-if="step !== 5">
+                            <div class="md:w-px md:h-5 w-4 h-px bg-[#A3A3A3]"></div>
+                        </template>
+                    </div>
+                </template>
+
+            </div>
+        </div>
+
+
+
+
+        <!-- Right Content -->
+        <!-- Outer Wrapper -->
+        <div class="min-h-screen px-4 md:px-12 py-10 w-full bg-white">
+
+
+            <!-- Step Section (Title Left, Cards Centered) -->
+            <div class="w-full max-w-7xl mx-auto text-center mt-16 md:mt-32">
+                <img src="img/registerSuccess.svg" alt="Success" class="w-[160px] md:w-[240px] mx-auto mb-9" />
+
+                <p class="text-[#00ca25] text-[16px] md:text-[24px] mb-10 font-helveticaMedium">
+                    Your account has been successfully Registered.
+                </p>
+
+                <a href="login.html" class="w-full md:w-[580px]">
+                    <button
+                        class="w-full h-auto md:h-[72px] md:w-[580px] bg-primaryBlue hover:bg-[#070770] text-white text-[24px] font-helveticaBold py-3 rounded-xl shadow-md transition">
+                        Go to Login
+                    </button>
+                </a>
+            </div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+        <script>
+            function selectCard(el) {
+                document.querySelectorAll('.card-box').forEach(card => {
+                    card.classList.remove('card-box-active');
+                });
+                el.classList.add('card-box-active');
+            }
+        </script>
+
+
+</body>
+
+
+</html>
