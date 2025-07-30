@@ -27,7 +27,7 @@
     <div class="flex flex-col md:flex-row  w-full min-h-screen">
         <!-- Left Vertical Stepper -->
         <div class="md:w-[100px] w-full px-5 flex flex-col items-center justify-center py-12 relative"
-            x-data="{ currentStep: 4 }">
+            x-data="{ currentStep: 3 }">
             <div class="flex md:flex-col gap-0 items-center">
 
                 <!-- Vertical or Horizontal connecting line -->
@@ -84,90 +84,31 @@
 
                     <!-- Cards Grid - CENTER -->
                     <div class="flex justify-center md:justify-start">
-                        <div class="genral-information-pg-main w-full">
-                            <div class="max-w-7xl mx-auto space-y-6">
+                        <div class="genral-information-pg-main genral-information-pg-main-full w-full">
+                            <div class="max-w-7xl mx-auto space-y-6 font-helveticaMedium">
 
-                                <form class="max-w-screen-xl mx-auto space-y-8">
-                                    <!-- Row 1 -->
-                                    <div class="grid grid-cols-1 sm:grid-cols-8 gap-5 relative">
+                                <div class="space-y-8">
+                                    <div class="form-row">
+                                        <input type="text" placeholder="Unified National Number" class="input-field">
+                                        <input type="text" placeholder="Business Name" class=" input-field">
+                                        <input type="text" placeholder="Business Type" class=" input-field">
+                                    </div>
+                                    <div class="form-row-2">
+
+
                                         <div class="relative w-full">
-                                            <select class="select-field">
-                                                <option>Title</option>
-                                                <option>Mr.</option>
-                                                <option>Ms.</option>
-                                                <option>Dr.</option>
-                                            </select>
+                                            <input type="text" placeholder="Insurance Date" class="input-field pr-12">
                                             <div class="calendar-icon">
-                                                <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2"
-                                                    viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round"
-                                                        d="M19 9l-7 7-7-7" />
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="34" height="34"
+                                                    viewBox="0 0 34 34" fill="none">
+                                                    <path
+                                                        d="M16.1494 26.0698H18.7693M24.0393 26.0698H26.6694M8.2693 26.0698H10.8894M16.1494 18.1899H18.7693M24.0393 18.1899H26.6694M8.2693 18.1899H10.8894M1.69923 11.5996H33.2293M25.3494 7.59961V1.04004M9.57936 7.59961V1.04004M6.96925 32.5996H27.9692C28.66 32.5996 29.344 32.4636 29.9822 32.1992C30.6204 31.9349 31.2003 31.5475 31.6887 31.0591C32.1772 30.5706 32.5645 29.9907 32.8289 29.3525C33.0932 28.7144 33.2293 28.0306 33.2293 27.3398V8.97998C33.2293 7.58402 32.6754 6.24487 31.6892 5.25684C30.7031 4.26881 29.3652 3.71261 27.9692 3.70996H6.96925C6.27718 3.70996 5.59203 3.846 4.95265 4.11084C4.31326 4.37568 3.73229 4.76405 3.24293 5.25342C2.75356 5.74278 2.36544 6.3235 2.1006 6.96289C1.83575 7.60228 1.69923 8.28791 1.69923 8.97998V27.3398C1.69791 28.0323 1.83353 28.7179 2.09791 29.3579C2.36229 29.9979 2.75037 30.5797 3.24 31.0693C3.72963 31.559 4.31096 31.9471 4.95094 32.2114C5.59092 32.4758 6.27681 32.6112 6.96925 32.6099V32.5996Z"
+                                                        stroke="#999999" stroke-width="1.5" stroke-linecap="round"
+                                                        stroke-linejoin="round" />
                                                 </svg>
                                             </div>
                                         </div>
-                                        <input type="text" placeholder="Full name (first, middle, last)"
-                                            class="input-field col-span-7" />
-                                    </div>
 
-                                    <!-- Row 2 -->
-                                    <div class="form-row-2">
-                                        <input type="text" placeholder="ID number / IQAMA number" class="input-field" />
-                                        <div class="relative w-full">
-                                            <input type="text" placeholder="Expiry date" class="input-field pr-12" />
-                                            <div class="calendar-icon">
-                                                <!-- Calendar Icon SVG here -->
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <!-- Row 3 -->
-                                    <div class="form-row">
-                                        <div class="relative w-full">
-                                            <input type="text" placeholder="Date of birth" class="input-field" />
-                                            <div class="calendar-icon">
-                                                <!-- Calendar Icon SVG here -->
-                                            </div>
-                                        </div>
-
-                                        <div class="radio-group">
-                                            <label>Do you work?</label>
-                                            <div class="flex gap-6">
-                                                <label class="radio-wrapper">
-                                                    <input type="radio" name="work" class="accent-[#999999] w-4 h-4" />
-                                                    Yes
-                                                </label>
-                                                <label class="radio-wrapper">
-                                                    <input type="radio" name="work" class="accent-[#999999] w-4 h-4" />
-                                                    No
-                                                </label>
-                                            </div>
-                                        </div>
-
-                                        <input type="text" placeholder="Job name" class="input-field" />
-                                    </div>
-
-                                    <!-- Row 4 -->
-                                    <div class="form-row">
-                                        <input type="text" placeholder="Graduation certificate" class="input-field" />
-                                        <div class="radio-group">
-                                            <label>Language graduate?</label>
-                                            <div class="flex gap-6">
-                                                <label class="radio-wrapper">
-                                                    <input type="radio" name="langGrad"
-                                                        class="accent-[#999999] w-4 h-4" /> Yes
-                                                </label>
-                                                <label class="radio-wrapper">
-                                                    <input type="radio" name="langGrad"
-                                                        class="accent-[#999999] w-4 h-4" /> No
-                                                </label>
-                                            </div>
-                                        </div>
-                                        <input type="text" placeholder="Acquired languages" class="input-field" />
-                                    </div>
-
-                                    <!-- Row 5 -->
-                                    <div class="form-row">
-                                        <input type="email" placeholder="Official email" class="input-field" />
                                         <div class="phone-wrapper">
                                             <div class="phone-code">
                                                 <span class="mr-1">966</span>
@@ -178,101 +119,213 @@
                                                 </svg>
                                             </div>
                                             <div class="divider"></div>
-                                            <input type="text" placeholder="987 772 299" class="phone-input" />
+                                            <input type="text" placeholder="966" class=" input-field">
                                         </div>
-                                        <input type="text" placeholder="Post office box" class="input-field" />
                                     </div>
 
-                                    <!-- Row 6 -->
                                     <div class="form-row">
-                                        <input type="text" placeholder="Bank name" class="input-field" />
+
+
                                         <div class="radio-group">
-                                            <span>Subscribing as agent?</span>
+                                            <label>Do you have a Director?</label>
                                             <div class="flex gap-6">
                                                 <label class="radio-wrapper">
-                                                    <input type="radio" name="agent" class="accent-[#999999] w-4 h-4" />
+                                                    <input type="radio" name="director"
+                                                        class="accent-[#999999] w-4 h-4">
                                                     Yes
                                                 </label>
                                                 <label class="radio-wrapper">
-                                                    <input type="radio" name="agent" class="accent-[#999999] w-4 h-4" />
+                                                    <input type="radio" name="director"
+                                                        class="accent-[#999999] w-4 h-4">
                                                     No
                                                 </label>
                                             </div>
                                         </div>
-                                        <input type="text" placeholder="IBAN number" class="input-field" />
-                                    </div>
 
-                                    <!-- Row 7 -->
-                                    <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                                        <div class="col-span-2">
-                                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                <input type="text" placeholder="Insurance company name"
-                                                    class="input-field" />
-                                                <input type="text" placeholder="Insurance Policy Number"
-                                                    class="input-field" />
-                                                <input type="text" placeholder="Date of Expiry" class="input-field" />
-                                                <input type="text" placeholder="Address" class="input-field" />
-                                                <input type="text" placeholder="Region" class="input-field" />
-                                                <input type="text" placeholder="City" class="input-field" />
-                                                <input type="text" placeholder="Postal code" class="input-field" />
+                                        <div class="radio-group">
+                                            <label>Are you registering as a Director?</label>
+                                            <div class="flex gap-6">
+                                                <label class="radio-wrapper">
+                                                    <input type="radio" name="reg_director"
+                                                        class="accent-[#999999] w-4 h-4">
+                                                    Yes
+                                                </label>
+                                                <label class="radio-wrapper">
+                                                    <input type="radio" name="reg_director"
+                                                        class="accent-[#999999] w-4 h-4">
+                                                    No
+                                                </label>
                                             </div>
                                         </div>
-                                        <div class="relative h-full rounded-xl overflow-hidden">
-                                            <iframe src="https://www.google.com/maps/embed?..." width="100%"
-                                                height="280" style="border:0;" loading="lazy"
-                                                class="rounded-xl"></iframe>
-                                            <div class="absolute inset-0 flex items-center justify-center">
-                                                <button
-                                                    class="bg-[#1B1787] text-white font-semibold px-6 py-2 rounded-md hover:opacity-90">Get
-                                                    direction</button>
-                                            </div>
-                                        </div>
-                                    </div>
 
-                                    <!-- Checkbox -->
-                                    <div class="checkbox-label">
-                                        <input type="checkbox" class="checkbox-field" />
-                                        <label>
-                                            I agree that above information is right and I agree.
-                                            <a href="#" class="text-[#00B4FA] underline">Terms & Conditions</a>.
-                                        </label>
-                                    </div>
-                                </form>
 
+                                        <input type="text" placeholder="Branch Number" class=" input-field">
+                                    </div>
+                                    <div class="form-row-2">
+                                        <input type="email" placeholder="Facility Email" class=" input-field">
+                                        <input type="url" placeholder="Facility Website" class="input-field">
+                                        <input type="text" placeholder="Bank  Name" class="col-span-2 input-field">
+
+                                        <input type="text" placeholder="BSN Number" class=" input-field">
+                                        <input type="text" placeholder="VAT Number" class=" input-field">
+                                    </div>
+                                </div>
                             </div>
 
+                            <!-- Location -->
+                            <div class="bg-white  mt-20">
+                                <button
+                                    class="w-full rounded-xl text-left p-4 font-semibold text-[#1F1A91] flex justify-between text-[23px] bg-[#F6F6F6] border-b mb-4">Location
+                                    <img src="img/dropArrow.svg" /></button>
+
+
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                                    <div class="col-span-2">
+                                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            <input type="text" placeholder="Country" class=" input-field">
+                                            <input type="text" placeholder="Region" class=" input-field">
+                                            <input type="text" placeholder="City" class=" input-field">
+                                            <input type="text" placeholder="National Address - SPL (Short Address)"
+                                                class=" input-field">
+                                            <input type="text"
+                                                placeholder="Address (Street, City, State) Arab Emirates, Saudi"
+                                                class=" input-field col-span-2">
+
+                                        </div>
+                                    </div>
+                                    <div class="relative h-full rounded-xl overflow-hidden">
+                                        <iframe src="https://www.google.com/maps/embed?..." width="100%" height="200"
+                                            style="border:0;" loading="lazy" class="rounded-xl"></iframe>
+                                        <div class="absolute inset-0 flex items-center justify-center">
+                                            <button
+                                                class="bg-[#1B1787] text-white font-semibold px-6 py-2 rounded-md hover:opacity-90">Get
+                                                direction</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Admin Information -->
+                            <div class="bg-white mt-20">
+                                <button
+                                    class="w-full rounded-xl text-left p-4 font-semibold bg-[#F6F6F6] flex justify-between border-b mb-4 text-[#1F1A91] text-[23px]">Admin
+                                    Information <img src="img/dropArrow.svg" /></button>
+                                <div class="space-y-6">
+                                    <div class="space-y-2">
+                                        <div class="font-semibold">General Manager Information</div>
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                            <input type="text" placeholder="Name" class=" input-field">
+                                            <input type="text" placeholder="Phone Number" class=" input-field">
+                                            <input type="email" placeholder="Company Email" class=" input-field">
+                                        </div>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="font-semibold">Finance Manager Information</div>
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                            <input type="text" placeholder="Name" class=" input-field">
+                                            <input type="text" placeholder="Phone Number" class=" input-field">
+                                            <input type="email" placeholder="Company Email" class=" input-field">
+                                        </div>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="font-semibold">Purchase Manager Information</div>
+                                        <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                                            <input type="text" placeholder="Name" class=" input-field">
+                                            <input type="text" placeholder="Phone Number" class=" input-field">
+                                            <input type="email" placeholder="Company Email" class=" input-field">
+                                        </div>
+                                    </div>
+                                    <div class="space-y-2">
+                                        <div class="font-semibold">Company Human-resource Information</div>
+                                        <input type="text" placeholder="Number of Employees" class=" input-field">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Employee List -->
+                            <div class="bg-white mt-20">
+                                <button
+                                    class="w-full rounded-xl text-left p-4 font-semibold bg-[#F6F6F6] text-[#1F1A91] text-[23px] border-b flex justify-between mb-4">Employee
+                                    List <img src="img/dropArrow.svg" /></button>
+                                <div class="flex items-center justify-between">
+                                    <p class="text-[#6A6A69] font-helveticaMedium text-[15px]">Please download the
+                                        provided Excel template, fill in the necessary information,
+                                        and submit it below.</p>
+                                    <button
+                                        class="bg-[#1B1787] text-white font-semibold px-6 py-2 rounded-md hover:opacity-90">Download
+                                        Sample
+                                        Excel</button>
+                                </div>
+                            </div>
+
+                            <!-- Upload Excel Template -->
+                            <div class="bg-white mt-20">
+                                <button
+                                    class="w-full rounded-xl flex justify-between text-left p-4 font-semibold text-[#1F1A91] text-[23px] bg-[#F6F6F6] border-b mb-4">Upload
+                                    the sample excel
+                                    template <img src="img/dropArrow.svg" /></button>
+                                <div class="w-full">
+                                    <p class="text-[#6A6A69] font-medium text-[15px] font-helveticaMedium">
+                                        Please upload the sample Excel template after filled the details.
+                                    </p>
+
+                                    <div class="mt-4 border border-dashed border-[#E0E0E0] bg-white p-5 rounded-xl">
+                                        <div
+                                            class="bg-[#F9F9F9] rounded-[10px] py-10 px-4 flex justify-center items-center flex-col">
+                                            <button
+                                                class="bg-[#1F1A91] text-white px-6 py-2 rounded-[5px] text-sm font-medium flex items-center gap-2 rounded-xl">
+                                                <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
+                                                    viewBox="0 0 24 24" stroke="currentColor">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        stroke-width="2" d="M12 4v16m8-8H4" />
+                                                </svg>
+                                                Drag file here
+                                            </button>
+                                            <p class="text-[#7A7A7A] text-[12px] mt-3 font-helveticaMedium">Allowed file
+                                                types : excel file.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
                         </div>
+
+
                     </div>
-
-                    <!-- Button - CENTER -->
-                    <div class="flex justify-center">
-                        <button
-                            class="bg-[#80828533] hover:bg-[#070770] hover:text-[#ffffff] text-[#120D77] text-[20px] font-helveticaBold py-3 px-12 rounded-xl shadow-md transition mt-32 me-6">
-                            Back
-                        </button>
-
-                        <button
-                            class="bg-primaryBlue hover:bg-[#070770] text-white text-[20px] font-helveticaBold py-3 px-12 rounded-xl shadow-md transition mt-32">
-                            Next
-                        </button>
-                    </div>
-
-
-
 
                 </div>
             </div>
-        </div>
 
-        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-        <script>
-            function selectCard(el) {
-                document.querySelectorAll('.card-box').forEach(card => {
-                    card.classList.remove('card-box-active');
-                });
-                el.classList.add('card-box-active');
-            }
-        </script>
+            <!-- Button - CENTER -->
+            <div class="flex justify-center">
+                <button
+                    class="bg-[#80828533] hover:bg-[#070770] hover:text-[#ffffff] text-[#120D77] text-[20px] font-helveticaBold py-3 px-12 rounded-xl shadow-md transition mt-32 me-6">
+                    Back
+                </button>
+
+                <button
+                    class="bg-primaryBlue hover:bg-[#070770] text-white text-[20px] font-helveticaBold py-3 px-12 rounded-xl shadow-md transition mt-32">
+                    Next
+                </button>
+            </div>
+
+
+
+
+        </div>
+    </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <script>
+        function selectCard(el) {
+            document.querySelectorAll('.card-box').forEach(card => {
+                card.classList.remove('card-box-active');
+            });
+            el.classList.add('card-box-active');
+        }
+    </script>
 
 
 </body>
