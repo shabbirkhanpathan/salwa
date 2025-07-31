@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Billing Info</title>
+    <link href="css/output.css" rel="stylesheet" />
+</head>
+
+<body class="">
+
+    <div class="flex min-h-screen items-center justify-center px-4 py-8 sm:px-6 lg:px-12">
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 w-full max-w-7xl">
+
+            <!-- Basic Plan -->
+            <div class="flex flex-col items-center">
+                <div class="flex flex-col w-full max-w-[376px] rounded-xl border border-[#1B1787] bg-white shadow-sm">
+                    <div class="flex flex-col p-6 sm:p-8">
+                        <h2 class="mb-6 text-[22px] font-helveticaMedium text-[#1B1787]">Basic</h2>
+                        <p class="mb-20 text-sm text-[#1B1787] max-w-56 font-HelveticaNowTextRegular">Perfect for
+                            occasional users or anyone exploring
+                            WeTransfer
+                            for
+                            the first time.</p>
+
+                        <div class="mb-4 flex items-center gap-2 text-lg font-semibold text-[#1B1787]">
+                            <span class="text-[34px]">1 Year</span>
+                        </div>
+
+                        <p class="mb-16 flex items-center text-sm text-[#1B1787]">
+                            <img src="img/riyal_blue.svg" alt="currency" class="h-5 mr-1">10 Per month, billed yearly.
+                        </p>
+
+                        <div class="flex items-baseline mb-8 gap-3 text-5xl font-bold text-[#1B1787]">
+                            <img src="img/riyal_blue.svg" alt="currency" class="h-10">50
+                        </div>
+                    </div>
+
+                    <button
+                        class="mt-auto w-full rounded-b-xl bg-[#1B1787] py-4 text-lg font-semibold text-white hover:bg-blue-800">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+
+            <!-- Advance Plan with "Most Popular" -->
+            <div class="relative flex flex-col items-center">
+                <!-- Most Popular Label -->
+                <div
+                    class="absolute -top-9 md:-top-9 w-[95%] max-w-[376px] bg-[#2dd4bf] text-white text-center py-2 rounded-t-xl text-sm font-medium z-10">
+                    Most popular
+                </div>
+
+                <div class="flex flex-col w-full max-w-[376px] rounded-xl border border-[#1B1787] bg-white shadow-md">
+                    <div class="flex flex-col p-6 sm:p-8 pt-12">
+                        <h2 class="mb-6 text-[22px] font-helveticaMedium text-[#1B1787]">Advance</h2>
+                        <p class="mb-20 text-sm text-[#1B1787] max-w-56 font-HelveticaNowTextRegular">The ultimate
+                            choice for power users who send big files
+                            all
+                            day,
+                            every day.</p>
+
+                        <div class="mb-4 flex items-center gap-2 text-lg font-semibold text-[#1B1787]">
+                            <span class="text-[34px]">2 Year</span>
+                            <span class="rounded-full bg-[#F74225] px-2 py-0.5 text-xs font-bold text-white">-10%</span>
+                        </div>
+
+                        <p class="mb-16 flex items-center text-sm text-[#1B1787]">
+                            <img src="img/riyal_blue.svg" alt="currency" class="h-5 mr-1">10 Per month, billed yearly.
+                        </p>
+
+                        <div class="flex items-baseline mb-8 gap-3 text-5xl font-bold text-[#1B1787]">
+                            <img src="img/riyal_blue.svg" alt="currency" class="h-10">80
+                        </div>
+                    </div>
+
+                    <button id="openModal"
+                        class="mt-auto w-full rounded-b-xl bg-[#1B1787] py-4 text-lg font-semibold text-white hover:bg-blue-800">
+                        Get Started
+                    </button>
+
+
+                </div>
+            </div>
+
+            <!-- Premium Plan -->
+            <div class="flex flex-col items-center">
+                <div class="flex flex-col w-full max-w-[376px] rounded-xl border border-[#1B1787] bg-white shadow-sm">
+                    <div class="flex flex-col p-6 sm:p-8 pt-12">
+                        <h2 class="mb-6 text-[22px] font-helveticaMedium text-[#1B1787]">Premium</h2>
+                        <p class="mb-20 text-sm text-[#1B1787] max-w-56 font-HelveticaNowTextRegular">Our most scalable
+                            and secure solution, customizable to
+                            your
+                            needs.</p>
+
+                        <div class="mb-4 flex items-center gap-2 text-lg font-semibold text-[#1B1787]">
+                            <span class="text-[34px]">3 Year</span>
+                            <span class="rounded-full bg-[#F74225] px-2 py-0.5 text-xs font-bold text-white">-10%</span>
+                        </div>
+
+                        <p class="mb-16 flex items-center text-sm text-[#1B1787]">
+                            <img src="img/riyal_blue.svg" alt="currency" class="h-5 mr-1">10 Per month, billed yearly.
+                        </p>
+
+                        <div class="flex items-baseline mb-8 gap-3 text-5xl font-bold text-[#1B1787]">
+                            <img src="img/riyal_blue.svg" alt="currency" class="h-10">105
+                        </div>
+                    </div>
+
+                    <button
+                        class="mt-auto w-full rounded-b-xl bg-[#1B1787] py-4 text-lg font-semibold text-white hover:bg-blue-800">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Modal Overlay -->
+    <div id="billingModal"
+        class="hidden fixed font-helveticaMedium inset-0 bg-[#1B1787] bg-opacity-80 flex items-center justify-center z-50">
+        <div class="max-w-3xl w-full bg-white rounded-xl p-6 shadow relative max-h-[90vh] overflow-y-auto">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-6">
+                <h2 class="text-[#1B1787] text-[40px] font-bold">Billing info</h2>
+                <button id="closeModal" class="text-[#1A1A1A] text-2xl">×</button>
+            </div>
+
+            <!-- Step Indicator -->
+            <div class="relative pl-8 border-l-2 border-[#E0E0E0]">
+                <!-- Step 1 -->
+                <div class="absolute -left-4 top-0">
+                    <div
+                        class="w-8 h-8 flex items-center justify-center rounded-full border-4 border-[#1B1787] bg-[#1B1787] text-white font-bold">
+                        1</div>
+                </div>
+                <div class="pl-6">
+                    <h3 class="text-[#1B1787] text-[23px] font-helveticaMedium mb-3">Summary</h3>
+                    <div class="space-y-4">
+                        <div class="flex justify-between items-center">
+                            <span class="text-[#6A6A69] text-sm">Subscription Amount</span>
+                            <span class="text-[#1A1A1A] text-sm font-bold">﷼50</span>
+                        </div>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="Add Discount Code"
+                                class="w-full border border-[#E0E0E0] text-sm text-[#6A6A69] px-4 py-2 rounded-md" />
+                            <input type="text" placeholder="Add Agent Code"
+                                class="w-full border border-[#E0E0E0] text-sm text-[#6A6A69] px-4 py-2 rounded-md" />
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[#6A6A69] text-sm">Subscription Amount</span>
+                            <span class="text-[#1A1A1A] text-sm font-bold">﷼50</span>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <span class="text-[#6A6A69] text-sm">VAT (15%)</span>
+                            <span class="text-[#1A1A1A] text-sm font-bold">﷼7.5</span>
+                        </div>
+                        <div
+                            class="bg-[#F5F5F5] text-[#1B1787] text-lg font-bold flex justify-between px-4 py-3 rounded-md mt-4">
+                            <span>Total</span>
+                            <span>﷼57.5</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="absolute -left-4 top-[300px]">
+                    <div
+                        class="w-8 h-8 flex items-center justify-center rounded-full border-4 border-[#E0E0E0] bg-white text-[#6A6A69] font-bold">
+                        2</div>
+                </div>
+                <div class="pt-12 pl-6">
+                    <h3 class="text-[#1B1787] text-[23px] font-helveticaMedium mb-4">Payment Details</h3>
+                    <div class="grid grid-cols-4 gap-4">
+                        <div class="card">
+                            <img src="img/stcPay.svg" class="w-12 mb-1" alt="">
+                            <p class="text-[15px] font-helveticaMedium text-[#A4A4A4]">STC Pay</p>
+                        </div>
+                        <div class="card card-active">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg"
+                                class="w-6 mb-1" alt="">
+                            <p class="text-sm font-medium text-[#1A1A1A]">Apple Pay</p>
+                        </div>
+                        <div class="card">
+                            <img src="img/tabbySvg.png" class="w-12 mb-1" alt="">
+                            <p class="text-[15px] font-helveticaMedium text-[#A4A4A4]">Tabby</p>
+                        </div>
+                        <div class="card">
+                            <img src="img/mada.svg" class="w-12 mb-1" alt="">
+                            <p class="text-[15px] font-helveticaMedium text-[#A4A4A4]">Mada</p>
+                        </div>
+                        <div class="card">
+                            <img src="img/visa.svg" class="w-12 mb-1" alt="">
+                            <p class="text-[15px] font-helveticaMedium text-[#A4A4A4]">Visa</p>
+                        </div>
+                        <div class="card">
+                            <img src="img/tamara.svg" class="w-12 mb-1" alt="">
+                            <p class="text-[15px] font-helveticaMedium text-[#A4A4A4]">Tamara</p>
+                        </div>
+                        <div class="card">
+                            <img src="img/wallet.svg" class="w-8 mb-1" alt="">
+                            <p class="text-[15px] font-helveticaMedium text-[#A4A4A4]">Wallet</p>
+                        </div>
+                        <div class="card">
+                            <img src="img/bankTransfer.svg" class="w-8 mb-1" alt="">
+                            <p class="text-[15px] font-helveticaMedium text-[#A4A4A4]">Bank Transfer</p>
+                        </div>
+                    </div>
+
+                    <!-- Footer Buttons -->
+                    <!-- Button - CENTER -->
+                    <div class="flex justify-center mt-20">
+                        <button
+                            class="bg-[#80828533] hover:bg-[#070770] hover:text-[#ffffff] text-[#120D77] text-[20px] font-helveticaBold py-3 px-12 rounded-xl shadow-md transition me-6">
+                            Cancel
+                        </button>
+
+                        <button
+                            class="bg-primaryBlue hover:bg-[#070770] text-white text-[20px] font-helveticaBold py-3 px-12 rounded-xl shadow-md transition">
+                            Pay
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const openBtn = document.getElementById('openModal');
+        const closeBtn = document.getElementById('closeModal');
+        const modal = document.getElementById('billingModal');
+
+        openBtn.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+    </script>
+</body>
+
+</html>
