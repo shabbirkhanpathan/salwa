@@ -263,10 +263,11 @@
                             Back
                         </button>
 
-                        <button
+                        <button id="openModal"
                             class="bg-primaryBlue hover:bg-[#070770] text-white text-[20px] font-helveticaBold py-3 px-12 rounded-xl shadow-md transition mt-32">
                             Next
                         </button>
+
                     </div>
 
 
@@ -275,17 +276,100 @@
                 </div>
             </div>
         </div>
+        <!-- ==== Deductible Payment start ==== -->
 
-        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
-        <script>
-            function selectCard(el) {
-                document.querySelectorAll('.card-box').forEach(card => {
-                    card.classList.remove('card-box-active');
+        <div id="unnModal"
+            class="fixed inset-0 bg-[#1b1787b8] z-[9999999] items-center justify-center px-4 py-8 hidden flex">
+
+            <div class="bg-white rounded-[20px] w-full max-w-[900px] p-[30px] relative">
+
+
+                <div class="flex justify-between items-center mb-6">
+                    <h3 class="text-[30px] font-bold text-[#1B1787] leading-snug">
+                        Choose Unified National Number (UNN)
+                    </h3>
+                    <button id="closeUnnModal" class="text-[#1A1A1A] text-2xl">×</button>
+                    <!-- Heading -->
+
+                </div>
+
+                <!-- Search Input -->
+                <div class="bg-[#F5F5F5] flex items-center rounded-[10px] px-4 py-2 mb-6">
+                    <input type="text" placeholder="Search here"
+                        class="flex-1 bg-transparent outline-none text-[16px] text-[#575756] placeholder-[#575756]" />
+                    <img src="img/search.svg" alt="Search" class="w-[20px] h-[20px]" />
+                </div>
+
+                <!-- Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full border-collapse rounded-[12px] overflow-hidden">
+                        <thead class="bg-[#F5F5F5] text-[#120D77] text-left">
+                            <tr>
+                                <th class="px-6 py-3 font-medium text-[16px]">Business Name</th>
+                                <th class="px-6 py-3 font-medium text-[16px]">UNN Number</th>
+                                <th class="px-6 py-3 font-medium text-[16px]">Branch Region</th>
+                                <th class="px-6 py-3 font-medium text-[16px]">Branch City</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-[#575756] text-[16px]">
+                            <tr class="border-b border-[#E6E6E6]">
+                                <td class="px-6 py-4">Food Supplies</td>
+                                <td class="px-6 py-4">7000000000</td>
+                                <td class="px-6 py-4">Riyadh</td>
+                                <td class="px-6 py-4">Riyadh</td>
+                            </tr>
+                            <tr class="border-b border-[#E6E6E6]">
+                                <td class="px-6 py-4">Food Supplies</td>
+                                <td class="px-6 py-4">7000000000</td>
+                                <td class="px-6 py-4">Mecca</td>
+                                <td class="px-6 py-4">Taif</td>
+                            </tr>
+                            <tr>
+                                <td class="px-6 py-4">Food Supplies</td>
+                                <td class="px-6 py-4">7000000000</td>
+                                <td class="px-6 py-4">Mecca</td>
+                                <td class="px-6 py-4">Jeddah</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="flex justify-center gap-6 mt-8">
+                    <button
+                        class="bg-[#1B1787] hover:bg-[#0f0c5c] text-white text-[16px] font-medium px-[40px] py-[10px] rounded-[10px]">
+                        New Registration
+                    </button>
+                    <button
+                        class="bg-[#00D03F] hover:bg-[#00b634] text-white text-[16px] font-medium px-[40px] py-[10px] rounded-[10px]">
+                        Confirm
+                    </button>
+                </div>
+            </div>
+
+            <!-- ==== Deductible Payment End ==== -->
+            <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+            <script>
+                function selectCard(el) {
+                    document.querySelectorAll('.card-box').forEach(card => {
+                        card.classList.remove('card-box-active');
+                    });
+                    el.classList.add('card-box-active');
+                }
+            </script>
+            <script>
+                const openBtn = document.getElementById('openModal');
+                const closeBtn = document.getElementById('closeUnnModal');
+                const modal = document.getElementById('unnModal');
+
+                openBtn.addEventListener('click', () => {
+                    modal.classList.remove('hidden');
                 });
-                el.classList.add('card-box-active');
-            }
-        </script>
 
+                closeBtn.addEventListener('click', () => {
+                    modal.classList.add('hidden');
+                });
+            </script>
 
 </body>
 

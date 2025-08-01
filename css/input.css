@@ -153,4 +153,35 @@
         .card-active p{
            @apply bg-black text-white py-2 w-full;
         }
+
+        /* Custom Card Styles */
+.service-option-card {
+  @apply border border-[#E6E7E8] rounded-2xl text-center cursor-pointer 
+         transition-all hover:border-[#00B4FA] flex justify-start items-center  max-w-lg gap-6;
+  box-sizing: border-box;
+  padding: 21px 27px; /* Extra padding to compensate for smaller border */
+}
+.service-option-card img.h-16{
+  width:70px;
+}
+.service-option-card-active {
+  border-width: 4px !important;
+  border-color: #00B4FA;
+  background-color: #F6F8FF;
+  padding: 18px 24px !important; /* Reduce padding by 3px (4px - 1px border increase) */
+}
+
+.service-option-title {
+  @apply text-[#0D0D78] font-helveticaMedium text-[16px] md:text-[18px] text-start;
+}
+
+.vehicle-card {
+  @apply border border-[#E6E6E6] rounded-[14px] p-5 bg-white transition-all cursor-pointer;
+}
+.vehicle-card:hover {
+  @apply border-[#00B4FA];
+}
+.vehicle-card.service-option-card-active {
+   border-color: #00B4FA;
+}
   }

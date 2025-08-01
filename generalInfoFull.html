@@ -304,7 +304,7 @@
                     Back
                 </button>
 
-                <button
+                <button id="openModal"
                     class="bg-primaryBlue hover:bg-[#070770] text-white text-[20px] font-helveticaBold py-3 px-12 rounded-xl shadow-md transition mt-32">
                     Next
                 </button>
@@ -317,6 +317,28 @@
     </div>
     </div>
 
+    <!-- UNN Error Modal -->
+    <div id="unnErrorPopup"
+        class="fixed inset-0 bg-[#1b1787cc] flex items-center justify-center px-4 z-[999999] hidden">
+
+        <div class="bg-white rounded-[15px] flex items-center gap-4 p-6 w-full max-w-[600px] relative shadow-xl">
+            <!-- Alert Icon -->
+            <div class="flex-shrink-0">
+                <img src="img/Sign.svg" alt="Alert" class="w-[100px] h-[100px]">
+            </div>
+
+            <!-- Alert Text -->
+            <p class="text-[#1B1787] text-[16px] font-helveticaMedium leading-snug">
+                Business is already existed with the same name and Unified National Number (UNN).
+                Please check and try again later!
+            </p>
+
+            <!-- Close Button -->
+            <button class="absolute top-2 right-4 text-[32px]" id="closeUnnModal">
+                ×
+            </button>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
     <script>
         function selectCard(el) {
@@ -325,9 +347,24 @@
             });
             el.classList.add('card-box-active');
         }
+
+
+
     </script>
 
+    <script>
+        const openBtn = document.getElementById('openModal');
+        const closeBtn = document.getElementById('closeUnnModal');
+        const modal = document.getElementById('unnErrorPopup');
 
+        openBtn.addEventListener('click', () => {
+            modal.classList.remove('hidden');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            modal.classList.add('hidden');
+        });
+    </script>
 </body>
 
 

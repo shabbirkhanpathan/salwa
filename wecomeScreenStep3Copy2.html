@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Salwa</title>
+    <link href="css/output.css" rel="stylesheet" />
+</head>
+
+<body class="min-h-screen bg-white font-sans text-gray-800">
+    <!-- Header Bar -->
+    <div class="header p-4">
+        <header
+            class="relative w-full h-[80px] flex items-center px-6 rounded-2xl  md:px-12 bg-no-repeat bg-cover bg-center"
+            style="background-image: linear-gradient(to right, rgb(13,13,120, 0.9), rgb(13,13,120, 0.9)), url('img/headerBg.svg');">
+
+            <!-- Logo -->
+            <img src="img/logoHeader.svg" alt="Salwa Logo" class="h-10 w-auto" />
+
+            <div class="text-white ms-8 text-right relative z-10 leading-tight">
+                <p class="text-sm opacity-80">Towards a Comprehensive Healthcare Future</p>
+            </div>
+        </header>
+    </div>
+    <!-- Main Container -->
+    <div class="flex flex-col md:flex-row  w-full min-h-screen">
+        <!-- Left Vertical Stepper -->
+        <div class="md:w-[100px] w-full px-5 flex flex-col items-center justify-center py-12 relative"
+            x-data="{ currentStep: 3 }">
+            <div class="flex md:flex-col gap-0 items-center">
+
+                <!-- Vertical or Horizontal connecting line -->
+                <div class="absolute md:top-4 md:bottom-4 md:hidden md:w-px md:h-auto h-px bg-gray-300 z-0"></div>
+
+                <template x-for="step in 5" :key="step">
+                    <div class="flex md:flex-col items-center relative z-10">
+
+                        <!-- Line before (skip first) -->
+                        <template x-if="step !== 1">
+                            <div class="md:w-px md:h-5 w-4 h-px bg-[#A3A3A3]"></div>
+                        </template>
+
+                        <!-- Outer Circle -->
+                        <div class="w-10 h-10 rounded-full flex items-center justify-center"
+                            :class="step <= currentStep ? 'border-2 border-[#0D0D78]' : 'border-0'">
+
+                            <!-- Inner Circle -->
+                            <div :class="step <= currentStep 
+                              ? 'bg-[#0D0D78] text-white' 
+                              : 'bg-[#949494] text-white'"
+                                class="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm">
+                                <span x-text="step"></span>
+                            </div>
+                        </div>
+
+                        <!-- Line after (skip last) -->
+                        <template x-if="step !== 5">
+                            <div class="md:w-px md:h-5 w-4 h-px bg-[#A3A3A3]"></div>
+                        </template>
+                    </div>
+                </template>
+
+            </div>
+        </div>
+
+
+
+
+        <!-- Right Content -->
+        <!-- Outer Wrapper -->
+        <div class="min-h-screen px-4 md:px-12 py-10 w-full bg-white">
+
+
+            <!-- Step 3 Right Content Area -->
+            <div class="min-h-screen w-full bg-white px-4 md:px-12 py-10">
+                <div class="max-w-7xl mx-auto mt-10 md:mt-20">
+                    <!-- Step Title -->
+                    <div class="mb-10">
+                        <p class="text-[#00B4FA] text-[15px] font-helveticaMedium">Step 3</p>
+                        <h2 class="text-[24px] md:text-[28px] font-helveticaBold text-[#120D77] leading-tight">
+                            Select one Option from here
+                        </h2>
+                    </div>
+
+                    <!-- Option Grid -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-x-8 gap-y-6">
+                        <!-- CARD START -->
+                        <div onclick="selectCard(this)" class="service-option-card service-option-card-active">
+                            <img src="img/Food.svg" class="h-16 mb-2" alt="Food Icon">
+                            <p class="service-option-title">Food</p>
+                        </div>
+                        <div onclick="selectCard(this)" class="service-option-card">
+                            <img src="img/cleaning.svg" class="h-16 mb-2" alt="Cleaning Icon">
+                            <p class="service-option-title">Cleaning</p>
+                        </div>
+                        <div onclick="selectCard(this)" class="service-option-card">
+                            <img src="img/laundry.svg" class="h-16 mb-2" alt="Laundry Icon">
+                            <p class="service-option-title">Laundry</p>
+                        </div>
+                        <div onclick="selectCard(this)" class="service-option-card">
+                            <img src="img/odcStationery.svg" class="h-16 mb-2" alt="Office Stationery">
+                            <p class="service-option-title">Office Stationery</p>
+                        </div>
+                        <div onclick="selectCard(this)" class="service-option-card">
+                            <img src="img/OfcFurniture.svg" class="h-16 mb-2" alt="Office Furniture">
+                            <p class="service-option-title">Office Furniture</p>
+                        </div>
+                        <div onclick="selectCard(this)" class="service-option-card">
+                            <img src="img/Transportation.svg" class="h-16 mb-2" alt="Transportation">
+                            <p class="service-option-title">Transportation</p>
+                        </div>
+                        <div onclick="selectCard(this)" class="service-option-card">
+                            <img src="img/UniformClothing.svg" class="h-16 mb-2" alt="Uniform Clothing">
+                            <p class="service-option-title">Uniform Clothing</p>
+                        </div>
+                        <div onclick="selectCard(this)" class="service-option-card">
+                            <img src="img/oprMain.svg" class="h-16 mb-2" alt="Operation and Maintenance">
+                            <p class="service-option-title">Operation and Maintenance</p>
+                        </div>
+                        <div onclick="selectCard(this)" class="service-option-card">
+                            <img src="img/SuprtSrvice.svg" class="h-16 mb-2" alt="Support Services">
+                            <p class="service-option-title">Support Services</p>
+                        </div>
+                        <div onclick="selectCard(this)" class="service-option-card">
+                            <img src="img/emplyService.svg" class="h-16 mb-2" alt="Employment and Services">
+                            <p class="service-option-title">Employment and Services</p>
+                        </div>
+                        <div onclick="selectCard(this)" class="service-option-card">
+                            <img src="img/Translation.svg" class="h-16 mb-2" alt="Translation">
+                            <p class="service-option-title">Translation</p>
+                        </div>
+                        <div onclick="selectCard(this)" class="service-option-card">
+                            <img src="img/salwaMarketing.svg" class="h-16 mb-2" alt="Salwa Agent Program">
+                            <p class="service-option-title">Salwa Marketing Agent Program</p>
+                        </div>
+                    </div>
+
+                    <!-- Navigation Buttons -->
+                    <div class="flex justify-center gap-6 mt-20">
+                        <button
+                            class="bg-[#E6E6E6] hover:bg-[#0D0D78] hover:text-white text-[#0D0D78] font-helveticaBold text-lg px-10 py-3 rounded-xl transition-all">
+                            Back
+                        </button>
+                        <button
+                            class="bg-[#0D0D78] hover:bg-[#070770] text-white font-helveticaBold text-lg px-10 py-3 rounded-xl transition-all">
+                            Next
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+        <script>function selectCard(el) {
+                document.querySelectorAll('.service-option-card').forEach(card => {
+                    card.classList.remove('service-option-card-active');
+                });
+                el.classList.add('service-option-card-active');
+            }
+        </script>
+
+
+</body>
+
+
+</html>
